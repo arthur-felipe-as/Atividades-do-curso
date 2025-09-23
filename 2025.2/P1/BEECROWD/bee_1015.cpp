@@ -3,7 +3,7 @@
 #include <cmath>
 
 struct Ponto{
-    float x,y;
+    double x,y;
 };
 
 float distancia(Ponto p1, Ponto p2){
