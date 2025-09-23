@@ -20,3 +20,18 @@ void quicksort(int *first, int *last, Compare cmp) {
   quicksort(first, pivot, cmp);
   quicksort(std::next(pivot), last, cmp);
 }
+
+
+void median_of_3(int* first, int* last, Compare cmp){
+    auto *middle = first+(std::distance(first,std::prev(last))/2);
+    if(cmp(*middle, *first)){
+        std::iter_swap(middle,first);
+    }
+    if(cmp(*std::prev(last),*middle)){
+        std::iter_swap(std::prev(last), middle);
+    }
+    if(cmp(*std::prev(last), *first)){
+        std::iter_swap(std::prev(last), first);
+    }
+    std::iter_swap(middle, std::prev(last));
+}
