@@ -7,7 +7,7 @@ pointer first_smallest(pointer first, const_pointer last, CompareFunc cmp) {
     first++;
   }
   return smallest;  
-
+}
 void selection_sort(pointer first, pointer last, CompareFunc compare_ints) {
   auto fast{first};
   while(fast != last){
