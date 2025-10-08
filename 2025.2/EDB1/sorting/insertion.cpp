@@ -45,15 +45,15 @@ void insertsort(value_type* first, value_type* last, Compare cmp = std::less<>()
     return;
 }
 
-// int main() {
-//   // ===================================================
+int main() {
+//   ===================================================
 //   // FIRST PART: Implementing the aux function merge().
 //   // ---------------------------------------------------
 
 //   // The array we wish to partition.
-//   constexpr size_t ar_size{ 11 };
-//   std::array<value_type, ar_size> a{ 9, 8, 1, 2, 10, 7, 5, 3, 4, 6, 0 };
-//   auto* middle{ std::next(a.begin(), (a.size() / 2)) };
+constexpr size_t ar_size{ 11 };
+std::array<value_type, ar_size> a{ 9, 8, 1, 2, 10, 7, 5, 3, 4, 6, 0 };
+auto* middle{ std::next(a.begin(), (a.size() / 2)) };
 
 
 //   // ===================================================
@@ -64,11 +64,11 @@ void insertsort(value_type* first, value_type* last, Compare cmp = std::less<>()
 
 
 //   // This is the array we wish to sort.
-//   std::array<value_type, ar_size> b{ 9, 8, 1, 2, 10, 7, 5, 3, 4, 6, 0 };
-//   print(">>> Original array befor SORTING: ", b.begin(), b.end());
-//   std::cout << "\n";
+std::array<value_type, ar_size> b{ 9, 8, 1, 2, 10, 7, 5, 3, 4, 6, 0 };
+print(">>> Original array befor SORTING: ", b.begin(), b.end());
+std::cout << "\n";
 //   // Calling mergesort...
-//   insertsort(b.begin(), b.end());
-//   print(">>> Sorted array: ", b.begin(), b.end());
-//   return 0;
-// }
+insertsort(b.begin(), b.end());
+print(">>> Sorted array: ", b.begin(), b.end());
+ return 0;
+ }
